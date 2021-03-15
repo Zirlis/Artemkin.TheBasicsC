@@ -2,7 +2,7 @@
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float _speed = 3.0f;
+    public float Speed = 3.0f;
     private Rigidbody _rigidbody;
     private void Awake()
     {
@@ -15,6 +15,6 @@ public class Ball : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        _rigidbody.AddForce(-movement * _speed);
+        _rigidbody.AddForce(-movement * Speed);
     }
 }
